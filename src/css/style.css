@@ -1,0 +1,288 @@
+html {
+    color: #fff;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000000;
+    font-family: "Poppins", sans-serif;
+    margin: 0 auto;
+    max-width: 1120px;
+    background-image: linear-gradient(180deg,
+            hsl(223deg 68% 6%) 0%,
+            hsl(254deg 57% 21%) 76%,
+            hsl(260deg 71% 34%) 93%,
+            hsl(263deg 86% 46%) 99%,
+            hsl(265deg 88% 45%) 101%,
+            hsl(264deg 74% 31%) 101%,
+            hsl(266deg 59% 17%) 101%,
+            hsl(0deg 0% 0%) 100%);
+}
+
+
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 15px;
+}
+
+.cabecalho .logo-marca {
+    width: 40%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.logo-marca:hover {
+    filter: brightness(150%);
+    transform: scale(1.1) translateX(9px) translateY(-9px);
+}
+
+.cabecalho .menu li a {
+    font-size: 20px;
+    text-transform: capitalize;
+    padding: 10px;
+    background: linear-gradient(45deg, #4a18e0, #130f40, #b929a6, #00fff2);
+    /* Gradiente de fundo animado */
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s infinite alternate;
+    /* Animação do gradiente */
+    color: #fff;
+    border-radius: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Transições suaves */
+    display: inline-block;
+    position: relative;
+}
+
+.cabecalho .menu li a:hover {
+    transform: translateY(-7px);
+    /* Efeito de levantamento */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    /* Sombra suave para enfatizar */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+
+.home {
+    display: flex;
+    min-height: calc(100vh - 130px);
+    align-items: center;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+.home .info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    letter-spacing: 2px;
+    padding: 0 15px;
+    max-width: 50%;
+}
+
+.home .info h1 {
+    font-family: "Raleway", sans-serif;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.home .info p {
+    font-family: "Raleway", sans-serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.home .redes-sociais {
+    display: flex;
+    gap: 20px;
+}
+
+.home .redes-sociais a i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 26px;
+    line-height: 50px;
+    /* Centraliza verticalmente o ícone dentro do círculo */
+    transition: 0.3s;
+}
+
+
+.home .redes-sociais a i:hover {
+    color: #9443d8;
+    border: 1px solid #9443d8;
+    transform: scale(1.1);
+}
+
+.home .container-foto .foto {
+    max-width: 450px;
+    border-radius: 50%;
+}
+
+.home .container-foto img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.home .foto.sombra-interna {
+    background: linear-gradient(to right, #4f028a, #07e96d, rgb(0, 255, 191));
+
+    background-size: 180% 180%;
+    animation: gradient-animation 5s ease infinite;
+}
+
+.projetos {
+    padding: 70px 0 70px;
+}
+
+.projetos .titulo {
+    text-align: center;
+    padding: 60px 0;
+    font-size: 45px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.projetos .container-projetos {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.projetos .projeto {
+    max-width: 260px;
+    max-height: 500px;
+    position: relative;
+    display: none; 
+}
+
+.projetos .projeto.ativo {
+    display: block;
+}
+
+.projetos .projeto img {
+    height: 100%;
+}
+
+.projetos .projeto h3 {
+    background-color: #040203;
+    width: 100%;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: absolute;
+    bottom: 0;
+}
+
+.projetos .projeto .informacoes-projeto {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-weight: 600;
+    opacity: 0;
+    transition: 0.3s;
+    padding: 20px;
+}
+
+.projetos .container-projetos .projeto:hover .informacoes-projeto {
+    opacity: 0.7;
+    background-color: #000;
+}
+
+
+.projetos .btn-mostrar-projetos {
+    background-color: none;
+    border: 1px solid white;
+    border-radius: 15px;
+    color: white;
+    width: 180px;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 20px auto;
+    /* Adiciona uma margem superior e inferior para afastar o botão dos projetos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.projetos .btn-mostrar-projetos:hover {
+    background-color: #9443d8;
+    transition: 0.3s;
+}
+
+.projetos .btn-mostrar-projetos.remover {
+    display: none;
+}
+
+
+.rodape {
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Cor de fundo com transparência */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    /* Sombra com transparência para simular vidro fosco */
+    width: 100%;
+    /* Define a largura para ocupar todo o espaço horizontal */
+    box-sizing: border-box;
+    /* Inclui preenchimento e borda na largura total */
+    opacity: 0.7;
+}
+
+
+.rodape .rodape__logo {
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, rgb(255, 0, 187), violet);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: animateText 10s infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes animateText {
+    0% {
+        background-position: 0 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}

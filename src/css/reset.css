@@ -1,0 +1,94 @@
+/*------------------------------------*\
+    RESET
+\*------------------------------------*/
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;    
+}
+
+/* Box sizing rules */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1, h2, h3, h4, h5, h6,
+p,
+ul, ol,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles */
+ul, ol {
+    padding: 0;
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Remove text decoration */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Remove default button styles */
+button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Remove default button styles */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove outline */
+button,
+input,
+textarea,
+select:focus {
+    outline: none;
+}
+
+/* Remove default anchor styles */
+a:focus {
+    outline: none;
+}
+
+/* Remove border */
+img,
+embed,
+iframe,
+object,
+video {
+    border: 0;
+}
+
+/* Remove svg styles */
+svg {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+img{
+    max-width: 100%;
+}
